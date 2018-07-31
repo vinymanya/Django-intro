@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amadon store</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width. initial-scale=1">
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'amadon_site/css/style.css'%}">
+</head>
+<body>
+<div class="separator">
+	<table>
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Price</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Dojo T-shirt</td>
+				<td>$19.99</td>
+				<td>
+					<div class="separator">
+						<form action="/buy" method="post">
+							{% csrf_token %}
+							<div class="form-group">
+								<select name="quantity">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<input type="submit" value="Buy">
+							</div>
+							<div class="form-group">
+								<input type="hidden" name="product_id" value="102">
+							</div>
+						</form>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Dojo sweater</td>
+				<td>$29.99</td>
+				<td>
+					<div class="separator">
+						<form action="/buy" method="post">
+							{% csrf_token %}
+							<div class="form-group">
+								<select name="quantity">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<input type="submit" value="Buy">
+							</div>
+							<div class="form-group">
+								<input type="hidden" name="product_id" value="105">
+							</div>
+						</form>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Dojo Cup</td>
+				<td>$4.99</td>
+				<td>
+					<div class="separator">
+						<form action="/buy" method="post">
+							{% csrf_token %}
+							<div class="form-group">
+								<select name="quantity">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<input type="submit" value="Buy">
+							</div>
+							<div class="form-group">
+								<input type="hidden" name="product_id" value="103">
+							</div>
+						</form>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

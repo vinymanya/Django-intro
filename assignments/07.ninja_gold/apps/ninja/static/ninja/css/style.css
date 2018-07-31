@@ -1,0 +1,23 @@
+.separator{
+	padding-left: 45px;
+	display: inline-block;
+	text-align: center;
+}
+#num_gold{
+	padding-left: 40px;
+	color: #009ac7;
+}
+
+span{
+	color: #eec10c;
+}
+
+ p{
+	text-align: left;
+	margin-left: 4px;
+}
+
+#act{
+	color: green;
+	margin-left: 0px;
+}
